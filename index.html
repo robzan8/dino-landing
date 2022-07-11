@@ -1,0 +1,249 @@
+<html>
+  <head>
+    <title>Dino</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <header>
+      <img src="images/dino.png">
+    </header>
+
+    <div id="banner">
+      <div>
+        <img src="images/data-analysis.png">
+      </div>
+      <div>
+        <h1>Dino</h1>
+        <h2>La raccolta dati per il bilancio sociale</h2>
+        <div class="orangepoint"></div>
+        <p>
+          Raccogli e gestisci i tuoi dati per il bilancio sociale in modo semplice,
+          flessibile e, finalmente, efficace.
+          DINO &egrave; una piattaforma che permette di semplificare il processo di raccolta dati
+          e l'elaborazione degli indicatori.
+          La preparazione della rendicontazione si integra con le attivit&agrave; istituzionali
+          trasformando il bilancio sociale da onere ad opportunit&agrave; di crescita e apprendimento.
+        </p>
+      </div>
+    </div>
+
+    <div id="content">
+      <h3>Contattaci per richiedere la demo</h3>
+      <div>
+        <button class="requestdemo">Richiedi</button>
+        <div class="requestform hide">
+          <form>
+            <input class="textinput" type="text" name="firstname" placeholder="Nome">
+            <input class="textinput" type="text" name="lastname" placeholder="Cognome">
+            <input class="textinput" type="text" name="company" placeholder="Organizzazione">
+            <input class="textinput" type="email" name="email" placeholder="E-mail">
+            <div class="checkbox">
+              <input type="checkbox" name="policy">
+              Confermo di aver preso visione della normativa
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="privacy">
+              Acconsento al trattamento dei miei dati personali
+              (<a target=_blank href="https://www.gnucoop.com/it/privacy-policy">Privacy Policy</a>)
+            </div>
+            <div class="submit">
+              <button class="submitbtn">Invia</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <br><br><br>
+      <h1>Perch&eacute; scegliere Dino</h1>
+      <div id="why">
+        <div>
+          <img src="images/why1.png">
+          <h2>Personalizzabile</h2>
+          <p>
+            E' possibile utilizzare gli strumenti di raccolta gi&agrave; predisposti o modificarli o crearne di nuovi,
+            in modo da adattare la raccolta dati alle esigenze specifiche della tua organizzazione.
+            E' possibile creare nuovi indicatori e metriche di aggregazione per semplificare l'elaborazione dei dati.
+          </p>
+        </div>
+        <hr>
+        <div>
+          <img src="images/why2.png">
+          <h2>Interoperabile</h2>
+          <p>
+            DINO &egrave; progettato per parlare con altri strumenti.
+            Possono essere importati dati da KoboToolbox e da Excel, compresi i form stessi.
+            E' possibile esportare i dati in Excel o CSV filtrandoli per condizioni personalizzabili.
+            Dai report possono essere esportati i singoli oggetti grafici in formati diversi (PNG, JPEG, PDF, EXCEL, CSV).
+          </p>
+        </div>
+        <hr>
+        <div>
+          <img src="images/why3.png">
+          <h2>Centralizzato</h2>
+          <p>
+            Il tuo bilancio sociale si appoggia su decine di file excel sparsi in rete in mille versioni diverse?
+            Ogni anno devi ricominciare il lavoro da capo? Se calcoli due volte i tuoi indicatori ottieni due risultati diversi?
+            Con DINO raccogli tutti i dati in un unico posto e ti assicuri che i dati restino coerenti,
+            affidabili e paragonabili da un anno all'altro.
+          </p>
+        </div>
+      </div>
+
+      <h3>Contattaci per richiedere la demo</h3>
+      <div>
+        <button class="requestdemo">Richiedi</button>
+        <div class="requestform hide">
+          <form>
+            <input class="textinput" type="text" name="firstname" placeholder="Nome">
+            <input class="textinput" type="text" name="lastname" placeholder="Cognome">
+            <input class="textinput" type="text" name="company" placeholder="Organizzazione">
+            <input class="textinput" type="email" name="email" placeholder="E-mail">
+            <div class="checkbox">
+              <input type="checkbox" name="policy">
+              Confermo di aver preso visione della normativa
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="privacy">
+              Acconsento al trattamento dei miei dati personali
+              (<a target=_blank href="https://www.gnucoop.com/it/privacy-policy">Privacy Policy</a>)
+            </div>
+            <div class="submit">
+              <button class="submitbtn">Invia</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        @2022 Gnucoop Soc. Coop.<br>
+        via Stefanardo da Vimercate 28<br>
+        20128 Milano
+      </p>
+      <p>
+        Tel. +393703309574<br>
+        E-mail <a href="mailto:info@gnucoop.com">info@gnucoop.com</a>
+      </p>
+      <p>
+        VAT Number IT07931480961<br>
+        REA MI-1991512<br>
+        <a target=_blank href="https://www.gnucoop.com/it/privacy-policy">Privacy policy</a>
+      </p>
+    </footer>
+
+    <script>
+      var rdButtons = document.getElementsByClassName('requestdemo');
+      for (var i = 0; i < rdButtons.length; i++) {
+        rdButtons[i].onclick = function() {
+          this.classList.add('hide');
+          this.parentElement.getElementsByClassName('requestform')[0].classList.remove('hide');
+        };
+      }
+
+      var subButtons = document.getElementsByClassName('submitbtn');
+      for (var i = 0; i < subButtons.length; i++) {
+        var formCnt = subButtons[i].parentElement.parentElement.parentElement;
+        var firstName = formCnt.querySelector('input[name="firstname"]');
+        firstName.addEventListener('change', function() {
+          this.classList.remove('has-error');
+        });
+        var lastName = formCnt.querySelector('input[name="lastname"]');
+        lastName.addEventListener('change', function() {
+          this.classList.remove('has-error');
+        });
+        var company = formCnt.querySelector('input[name="company"]');
+        company.addEventListener('change', function() {
+          this.classList.remove('has-error');
+        });
+        var email = formCnt.querySelector('input[name="email"]');
+        email.addEventListener('change', function() {
+          this.classList.remove('has-error');
+        });
+        var privacy = formCnt.querySelector('input[name="privacy"]');
+        privacy.addEventListener('change', function() {
+          this.classList.remove('has-error');
+        });
+        var policy = formCnt.querySelector('input[name="policy"]');
+        policy.addEventListener('change', function() {
+          this.classList.remove('has-error');
+        });
+        subButtons[i].onclick = function(evt) {
+          evt.preventDefault();
+          var hasError = false;
+          var formCnt = this.parentElement.parentElement.parentElement;
+          var firstName = formCnt.querySelector('input[name="firstname"]');
+          if (firstName.value != null && firstName.value.length > 0) {
+            firstName.classList.remove('has-error');
+          } else {
+            hasError = true;
+            firstName.classList.add('has-error');
+          }
+          var lastName = formCnt.querySelector('input[name="lastname"]');
+          if (lastName.value != null && lastName.value.length > 0) {
+            lastName.classList.remove('has-error');
+          } else {
+            hasError = true;
+            lastName.classList.add('has-error');
+          }
+          var company = formCnt.querySelector('input[name="company"]');
+          if (company.value != null && company.value.length > 0) {
+            company.classList.remove('has-error');
+          } else {
+            hasError = true;
+            company.classList.add('has-error');
+          }
+          var email = formCnt.querySelector('input[name="email"]');
+          if (email.value != null && email.value.length > 0) {
+            email.classList.remove('has-error');
+          } else {
+            hasError = true;
+            email.classList.add('has-error');
+          }
+          var privacy = formCnt.querySelector('input[name="privacy"]');
+          if (privacy.checked) {
+            privacy.classList.remove('has-error');
+          } else {
+            hasError = true;
+            privacy.classList.add('has-error');
+          }
+          var policy = formCnt.querySelector('input[name="policy"]');
+          if (policy.checked) {
+            policy.classList.remove('has-error');
+          } else {
+            hasError = true;
+            policy.classList.add('has-error');
+          }
+          if (hasError) {
+            return;
+          }
+          evt.target.innerHTML = 'Attendi...';
+          var req = new XMLHttpRequest();
+          var url = 'https://formspree.io/f/mrgjkrzp';
+          req.open('POST', url);
+          req.onreadystatechange = function() {
+            if (this.readyState === XMLHttpRequest.DONE) {
+              firstName.value = '';
+              lastName.value = '';
+              company.value = '';
+              email.value = '';
+              privacy.checked = false;
+              policy.checked = false;
+              evt.target.innerHTML = 'Invia';
+              window.alert('Richiesta inviata con successo!');
+            }
+          }
+          req.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+          req.send(JSON.stringify({
+            firstname: firstName.value,
+            lastname: lastName.value,
+            company: company.value,
+            email: email.value
+          }));
+        }
+      }
+    </script>
+  </body>
+</html>

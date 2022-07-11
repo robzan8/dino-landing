@@ -1,0 +1,247 @@
+@font-face {
+	font-family: 'Gotham';
+	src: url('fonts/subset-Gotham-Medium.woff2') format('woff2'),
+		 url('fonts/subset-Gotham-Medium.woff')  format('woff');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('fonts/subset-Gotham-Light.woff2') format('woff2'),
+		 url('fonts/subset-Gotham-Light.woff')  format('woff');
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('fonts/subset-Gotham-Bold.woff2') format('woff2'),
+		 url('fonts/subset-Gotham-Bold.woff') format('woff');
+	font-weight: bold;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	color: #163e71;
+	font-family: 'Gotham', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+a {
+	color: #163e71;
+}
+
+.hide {
+	display: none !important;
+}
+
+header {
+	display: block;
+	width: 100%;
+	padding: 16px;
+	box-shadow: 0 0 15px #00000044;
+}
+
+header img {
+	height: 50px;
+}
+
+.orangepoint {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	background-color: #f07d00;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 42px;
+	margin: 20px 0;
+}
+h2 {
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 24px;
+}
+h3 {
+	font-weight: 500;
+	font-size: 28px;
+	margin: 15px 0;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+#banner {
+	padding: 30px 7%;
+	display: flex;
+	align-items: center;
+}
+#banner img {
+	width: 90%;
+}
+#banner > div:first-child {
+	width: 45%;
+}
+#banner > div:last-child {
+	width: 55%;
+}
+
+#content {
+	padding: 0 7%;
+	text-align: center;
+}
+
+button {
+	border: none;
+	color: white;
+	background-color: #f07d00;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 7px 30px;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+#why {
+	display: grid;
+	grid-template-columns: 1fr 1px 1fr 1px 1fr;
+	gap: 30px;
+	padding-bottom: 30px;
+}
+#why img {
+	height: 60px;
+}
+
+.requestform {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 1em;
+}
+
+form {
+	width: 50%;
+}
+
+.textinput {
+	display: inline-block;
+	width: 100%;
+	font-family: 'Gotham', sans-serif;
+	color: #163e71;
+	border: 1px solid #163e71;
+	border-radius: 0.7em;
+	line-height: 1.5em;
+	padding: 0.8em 1em 0.1em;
+	margin-bottom: 1em;
+}
+
+.has-error {
+	border-color: red;
+}
+
+.checkbox {
+	text-align: left;
+	font-size: 13px;
+}
+
+.checkbox .has-error {
+	outline: 1px solid red;
+}
+
+.submit {
+	margin-top: 1em;
+}
+
+footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 30px;
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 13px;
+}
+footer > p {
+	text-align: center;
+}
+footer > p:first-child {
+	text-align: left;
+}
+footer > p:last-child {
+	text-align: right;
+}
+
+@media screen and (max-width: 1100px) {
+	#banner {
+		flex-direction: column;
+		text-align: center;
+		padding: 0;
+		padding-bottom: 30px;
+	}
+	#banner img {
+		width: 250px;
+	}
+	#banner > div:first-child {
+		width: 100%;
+		background-color: #eef2fb;
+	}
+	#banner > div:last-child {
+		width: 100%;
+		padding: 0 7%;
+	}
+
+	#why {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+	#why hr {
+		display: none;
+	}
+
+	form {
+		width: 75%;
+	}
+
+	footer {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+	footer > p {
+		text-align: center !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	html, body {
+		font-size: 15px;
+	}
+
+	h1 {
+		font-size: 30px;
+	}
+	h2 {
+		font-size: 22px;
+	}
+	h3 {
+		font-size: 25px;
+	}
+
+	#banner img {
+		width: 50vw;
+	}
+
+	form {
+		width: 100%;
+	}
+}
